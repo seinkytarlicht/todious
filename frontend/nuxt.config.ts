@@ -21,6 +21,8 @@ export default defineNuxtConfig({
       include: ["@vue/devtools-core", "@vue/devtools-kit", "@wailsio/runtime"],
     },
   },
+  modules: ["@nuxt/ui", "@vueuse/nuxt"],
+  css: ["~/assets/css/main.css"],
   imports: {
     dirs: ["../bindings/**"],
   },

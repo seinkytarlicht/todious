@@ -1,0 +1,147 @@
+/* ============================================================
+   NUXT UI v4 — CUSTOM THEME TEMPLATE
+   File: app/assets/css/main.css
+   Docs: https://ui.nuxt.com/docs/getting-started/theme/css-variables
+   ============================================================ */
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* ============================================================
+   1. TAILWIND @THEME
+   ============================================================ */
+
+@theme {
+  /* Font */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@theme static {
+  --color-brand-50: oklch(95.08% 0.018 0.4);
+  --color-brand-100: oklch(90.38% 0.036 2.53);
+  --color-brand-200: oklch(80.81% 0.077 4.47);
+  --color-brand-300: oklch(71.76% 0.119 6.28);
+  --color-brand-400: oklch(63.47% 0.159 9.61);
+  --color-brand-500: oklch(56.76% 0.194 13.94);
+  --color-brand-600: oklch(48.22% 0.161 13.81);
+  --color-brand-700: oklch(39.43% 0.129 12.9);
+  --color-brand-800: oklch(30.1% 0.094 12.19);
+  --color-brand-900: oklch(20.06% 0.052 9.23);
+  --color-brand-950: oklch(16.89% 0.04 7.45);
+}
+
+/* ============================================================
+   2. SEMANTIC COLORS — LIGHT MODE
+   ============================================================ */
+
+:root {
+  --ui-primary: var(--ui-color-primary-600);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500);
+}
+
+/* ============================================================
+   3. BACKGROUND TOKENS — LIGHT MODE
+   ============================================================ */
+
+:root {
+  --ui-bg: #f3f4f6;
+  --ui-bg-muted: #e5e7eb;
+  --ui-bg-elevated: #ffffff;
+  --ui-bg-accented: #d1d5db;
+  --ui-bg-inverted: #111827;
+}
+
+/* ============================================================
+   4. BORDER TOKENS — LIGHT MODE
+   ============================================================ */
+
+:root {
+  --ui-border: #d1d5db;
+  --ui-border-muted: #d1d5db;
+  --ui-border-accented: #9ca3af;
+  --ui-border-inverted: #111827;
+}
+
+/* ============================================================
+   5. TEXT TOKENS — LIGHT MODE
+   ============================================================ */
+
+:root {
+  --ui-text-dimmed: #9ca3af;
+  --ui-text-muted: #6b7280;
+  --ui-text-toned: #4b5563;
+  --ui-text: #374151;
+  --ui-text-highlighted: #111827;
+  --ui-text-inverted: #ffffff;
+}
+
+/* ============================================================
+   6. LAYOUT & RADIUS
+   ============================================================ */
+
+:root {
+  --ui-radius: 0.375rem;
+  --ui-container: 80rem;
+}
+
+/* ============================================================
+   7. DARK MODE OVERRIDES
+   ============================================================ */
+
+.dark {
+  --ui-primary: var(--ui-color-primary-500);
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-success: var(--ui-color-success-400);
+  --ui-info: var(--ui-color-info-400);
+  --ui-warning: var(--ui-color-warning-400);
+  --ui-error: var(--ui-color-error-400);
+
+  /* Background */
+  --ui-bg: #1e1e1e;
+  --ui-bg-muted: #1f2022;
+  --ui-bg-elevated: #2b2b2b;
+  --ui-bg-accented: #424242;
+  --ui-bg-inverted: #f9fafb;
+
+  /* Border */
+  --ui-border: #3d3e40;
+  --ui-border-muted: #323334;
+  --ui-border-accented: #4b4c4e;
+  --ui-border-inverted: #ffffff;
+
+  /* Text */
+  --ui-text-dimmed: #6b7280;
+  --ui-text-muted: #9ca3af;
+  --ui-text-toned: #d1d5db;
+  --ui-text: #f3f4f6;
+  --ui-text-highlighted: #ffffff;
+  --ui-text-inverted: #111827;
+}
+
+/* ============================================================
+   8. OPTIONAL — Cursor pointer (Tailwind v4 default: cursor-default)
+   ============================================================ */
+
+/* button, [role="button"] {
+  cursor: pointer;
+} */
+
+/* ============================================================
+   9. OPTIONAL — Custom focus outline 
+   ============================================================ */
+
+/* *,
+::before,
+::after {
+  @apply outline-primary/25;
+}
+
+*:focus-visible,
+*:has(> a:focus-visible) {
+  --tw-ring-color: var(--ui-primary);
+} */
