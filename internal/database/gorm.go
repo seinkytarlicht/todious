@@ -11,6 +11,7 @@ func New() *gorm.DB {
 	if err != nil {
 		panic("failed to connect database")
 	}
+	db.Exec("PRAGMA foreign_keys = ON")
 
 	db.AutoMigrate(&model.TodoGroup{}, &model.Todo{})
 

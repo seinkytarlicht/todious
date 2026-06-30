@@ -1,10 +1,7 @@
 package model
 
-import "gorm.io/gorm"
-
 type Todo struct {
-	gorm.Model
-
+	ID          uint `gorm:"primarykey"`
 	Task        string
 	Finished    bool
 	TodoGroupID uint

@@ -37,20 +37,20 @@ func (t *TodoService) DeleteTodoGroup(groupId uint) {
 func (t *TodoService) AddTodo(groupId uint, task string) model.Todo {
 	todo := t.todoR.AddTodo(groupId, task)
 
-	t.app.Event.Emit("todoService:changes")
+	t.app.Event.Emit("todoService:taskCreated")
 	return todo
 }
 
 func (t *TodoService) UpdateTodo(todoId uint, task string, finished bool) {
 	t.todoR.UpdateTodo(todoId, task, finished)
 
-	t.app.Event.Emit("todoService:changes")
+	t.app.Event.Emit("todoService:taskUpdated")
 }
 
 func (t *TodoService) RemoveTodo(todoId uint) {
 	t.todoR.RemoveTodo(todoId)
 
-	t.app.Event.Emit("todoService:changes")
+	t.app.Event.Emit("todoService:taskRemoved")
 }
 
 func NewTodoService(todoRepo repository.TodoRepository, app *application.App) *TodoService {

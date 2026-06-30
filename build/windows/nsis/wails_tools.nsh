@@ -5,19 +5,19 @@
 !include "FileFunc.nsh"
 
 !ifndef INFO_PROJECTNAME
-    !define INFO_PROJECTNAME "Todious"
+    !define INFO_PROJECTNAME "todious"
 !endif
 !ifndef INFO_COMPANYNAME
-    !define INFO_COMPANYNAME "My Company"
+    !define INFO_COMPANYNAME "Seinkyt Arlicht"
 !endif
 !ifndef INFO_PRODUCTNAME
-    !define INFO_PRODUCTNAME "My Product"
+    !define INFO_PRODUCTNAME "Todious"
 !endif
 !ifndef INFO_PRODUCTVERSION
-    !define INFO_PRODUCTVERSION "0.1.0"
+    !define INFO_PRODUCTVERSION "0.0.1"
 !endif
 !ifndef INFO_COPYRIGHT
-    !define INFO_COPYRIGHT "© 2026, My Company"
+    !define INFO_COPYRIGHT "(c) 2025, Seinkyt Arlicht"
 !endif
 !ifndef PRODUCT_EXECUTABLE
     !define PRODUCT_EXECUTABLE "${INFO_PROJECTNAME}.exe"

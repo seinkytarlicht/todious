@@ -14,7 +14,8 @@ const laneWidth = computed(
 const estimateSize = computed(() => laneWidth.value * (480 / 640));
 
 const todoGroupList = ref<TodoGroup[]>([]);
-let unsubscribe: () => void;
+let unsubscribeChanges: () => void;
+let unsubscribeTodoRemoved: () => void;
 
 async function getAllTodoG() {
   const todoG = await TodoService.GetAllTodoGroup();
@@ -23,18 +24,16 @@ async function getAllTodoG() {
   }
 }
 
-watch(width, (l) => {
-  console.log(l, lanes.value);
-});
-
 onMounted(() => {
   getAllTodoG();
 
-  unsubscribe = Events.On("todoService:changes", getAllTodoG);
+  unsubscribeChanges = Events.On("todoService:changes", getAllTodoG);
+  unsubscribeTodoRemoved = Events.On("todoService:taskRemoved", getAllTodoG);
 });
 
 onUnmounted(() => {
-  unsubscribe();
+  unsubscribeChanges();
+  unsubscribeTodoRemoved();
 });
 </script>
 
@@ -42,7 +41,7 @@ onUnmounted(() => {
   <div class="flex flex-col w-full h-full items-center">
     <UScrollArea
       ref="scrollArea"
-      class="w-full h-full p-2"
+      class="w-full h-full py-2"
       :items="todoGroupList"
       v-slot="{ item }"
       :virtualize="{

@@ -1,10 +1,7 @@
 package model
 
-import "gorm.io/gorm"
-
 type TodoGroup struct {
-	gorm.Model
-
+	ID    uint `gorm:"primarykey"`
 	Title string
-	Todos []Todo
+	Todos []Todo `gorm:"constraint:OnDelete:CASCADE;"`
 }
