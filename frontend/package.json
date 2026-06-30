@@ -22,6 +22,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@iconify-json/ic": "^1.2.4",
     "@wailsio/runtime": "latest"
   },
   "author": "My Company"

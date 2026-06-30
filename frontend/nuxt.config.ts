@@ -21,6 +21,12 @@ export default defineNuxtConfig({
       include: ["@vue/devtools-core", "@vue/devtools-kit", "@wailsio/runtime"],
     },
   },
+  icon: {
+    serverBundle: false,
+    clientBundle: {
+      scan: true,
+    },
+  },
   modules: ["@nuxt/ui", "@vueuse/nuxt"],
   css: ["~/assets/css/main.css"],
   imports: {
