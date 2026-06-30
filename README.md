@@ -2,6 +2,11 @@
 
 An Todo App built using Wails 3 + Nuxt 4. This app is example of [Wails3 template for Nuxt 4](https://github.com/seinkytarlicht/wails3-template-nuxt4-ts)
 
+## Screenshot
+
+<img width="1121" height="618" alt="Todious" src="https://github.com/user-attachments/assets/3b032b06-a34f-46a6-958d-83873c6d0793" />
+
+
 ## Tech Stack
 
 | Module   | Technology |
